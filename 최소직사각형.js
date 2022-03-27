@@ -11,3 +11,4 @@ function solution(sizes) {
     }
     return arr[0]*arr[1]
 }
+console.log(solution([[60, 50], [30, 70], [60, 30], [80, 40]]));

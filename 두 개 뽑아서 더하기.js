@@ -1,5 +1,4 @@
 function solution(numbers) {
-   // var answer = [];
     var a = [];
     
     for(let i=0;i<numbers.length;i++){
@@ -12,3 +11,4 @@ function solution(numbers) {
       
     return answer.sort((a,b)=>a-b);
 }
+console.log(solution([2, 1, 3, 4, 1]));
