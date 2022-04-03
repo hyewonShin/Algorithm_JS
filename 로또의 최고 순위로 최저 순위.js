@@ -1,26 +1,30 @@
 function solution(lottos, win_nums) {
-
-    const correctCnt = lottos.filter(c => win_nums.includes(c)).length;
-    const zero = lottos.filter(z => z === 0).length;
-
-    const minCorrect = checkRanking(correctCnt);
-    const maxCorrcet = checkRanking(correctCnt + zero);
-    return [maxCorrcet,minCorrect];
+    let answer = [];
     
-//당첨 갯수 당첨 순위로 변경하는 함수
-    function checkRanking(numOfWinners) {
-        if (numOfWinners === 6) {
+    let correct = lottos.filter(lotto=>win_nums.includes(lotto)).length;
+    let zero = lottos.filter(lotto=>lotto === 0).length;
+    
+    let min = correct;
+    let max = correct + zero;
+    
+    let minimum = checkRanking(min);
+    let maximum = checkRanking(max);
+    
+    return[maximum,minimum];
+    
+    function checkRanking(aaa){
+        if(aaa === 6){
             return 1;
-        } else if (numOfWinners === 5) {
+        }else if(aaa === 5){
             return 2;
-        } else if (numOfWinners === 4) {
+        }else if(aaa === 4){
             return 3;
-        } else if (numOfWinners === 3) {
+        }else if(aaa === 3){
             return 4;
-        } else if (numOfWinners === 2) {
+        }else if(aaa === 2){
             return 5;
-        } else {
-            return 6;
+        }else{
+            return 6;    
         }
     }
 }
