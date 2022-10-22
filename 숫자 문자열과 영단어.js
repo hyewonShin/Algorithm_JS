@@ -12,7 +12,7 @@ function solution(s) {
   s = s.replace(/eight/g, 8);
   s = s.replace(/nine/g, 9);
 
-  answer += Number(s);
+  answer = Number(s);
 
   return answer;
 }
