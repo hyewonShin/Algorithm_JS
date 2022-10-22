@@ -8,12 +8,8 @@ function solution(left, right) {
         array.push(j);
       }
     }
-    if (array.length % 2 == 0) {
-      answer += i;
-    } else {
-      answer -= i;
-    }
+    array.length % 2 == 0 ? (answer += i) : (answer -= i);
   }
   return answer;
 }
-console.log(solution(24, 27));
+console.log(solution(13, 17));
